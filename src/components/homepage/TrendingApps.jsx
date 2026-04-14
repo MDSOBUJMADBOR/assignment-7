@@ -30,7 +30,7 @@ fetchData();
 
  
 
-<div className='grid grid-cols-4 justify-center items-center gap-2'>
+<div className='grid grid-cols-4 justify-center items-center gap-5 py-10'>
 {
 apps.map((app,ind) => {
           return <AppCard app={app} key={ind}></AppCard>
