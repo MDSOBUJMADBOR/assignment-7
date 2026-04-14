@@ -1,13 +1,12 @@
 import React from 'react';
 
-const InstallApps = () => {
+const Stats = () => {
           return (
                     <div>
-
-   InstallApps 
+Stats
 
                     </div>
           );
 };
 
-export default InstallApps;
+export default Stats;

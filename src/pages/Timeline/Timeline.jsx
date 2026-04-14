@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Apps = () => {
+const Timeline = () => {
           return (
                     <div>
 
-      All appps
+Timeline 
 
                     </div>
           );
 };
 
-export default Apps;
+export default Timeline;

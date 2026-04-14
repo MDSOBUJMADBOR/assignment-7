@@ -15,12 +15,12 @@ const Navbar = () => {
        icon:  <HouseIcon   />,
     },
     {
-      path: "/apps",
+      path: "/Timeline",
       text: "Timeline",
       icon: <Clock2  />,
     },
     {
-      path: "/installApps",
+      path: "/Stats",
       text: "Stats",
       icon:  <ChartLine   />
     },

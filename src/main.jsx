@@ -3,10 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import RootLayout from './layout/RootLayout';
-import Apps from './pages/apps/Apps';
-import InstallApps from './pages/installApps/InstallApps';
+
+
 import Homepage from './pages/homepage/Homepage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import Timeline from './pages/Timeline/Timeline';
+import Stats from './pages/Stats/Stats';
 
 
 const router = createBrowserRouter([
@@ -17,15 +19,16 @@ const router = createBrowserRouter([
       {
         // path: '/',
         index: true,
-        element: <Homepage></Homepage>
+        element: <Homepage></Homepage>,
+        loader: ()=> fetch("/data.json")
       },
       {
-        path: '/apps',
-        element: <Apps></Apps>
+        path: '/Timeline',
+        element: <Timeline></Timeline>
       },
       {
-        path: '/installApps',
-        element: <InstallApps></InstallApps>
+        path: '/Stats',
+        element: <Stats></Stats>
       }
     ],
     errorElement: <NotFoundPage></NotFoundPage>
