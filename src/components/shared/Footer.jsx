@@ -9,6 +9,7 @@ const Footer = () => {
                   <footer className="bg-[#295c4a] text-white py-12">
       <div className="max-w-5xl mx-auto text-center px-4">
         
+
         {/* Title */}
         <h1 className="text-5xl font-bold mb-4">KeenKeeper</h1>
 
@@ -47,6 +48,7 @@ const Footer = () => {
 
       </div>
     </footer>
+    
           );
 };
 
