@@ -25,7 +25,7 @@ const Navbar = () => {
       icon:  <ChartLine   />
     },
     
-  ];
+  ]; 
 
   return (
     <nav className=" shadow">

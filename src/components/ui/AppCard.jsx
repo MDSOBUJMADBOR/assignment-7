@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const AppCard = ({ app }) => {
 
@@ -10,7 +11,7 @@ const AppCard = ({ app }) => {
   };
 
   return (
-    <div className='shadow-md bg-white p-3 rounded-lg flex justify-center items-center'>
+  <Link to={`/${app.id}`} className='shadow-md bg-white p-3 rounded-lg flex justify-center items-center'>
      <div className='text-center'>
            <img src={app.picture} alt="" className='rounded-full p-2 max-w-[250px] mx-auto w-[80px] h-[80px]' />
 
@@ -26,7 +27,7 @@ const AppCard = ({ app }) => {
           app.tags.map((tag, ind) => (
             <span key={ind} className='bg-gray-200 px-2 py-1 rounded flex justify-center items-center'>
               {tag}
-            </span>
+            </span> 
           ))
         }
       </div>
@@ -37,7 +38,7 @@ const AppCard = ({ app }) => {
       </p>
      </div>
 
-    </div>
+    </Link>
   );
 };
 

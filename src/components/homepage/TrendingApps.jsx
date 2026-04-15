@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AppCard from '../ui/AppCard';
+import { ClipLoader } from 'react-spinners';
+import useApps from '../../hooks/useApps';
 // import { useLoaderData } from 'react-router';
 
 const TrendingApps = () => {
@@ -7,18 +9,7 @@ const TrendingApps = () => {
 // const data = useLoaderData()
 // console.log(data,'all data');
 
-const [apps,setApps] = useState([]);
-
-useEffect(()=> {
-const fetchData = async () => {
-const res = await fetch('/data.json');
-const data = await res.json();
-console.log(data);
-setApps(data);
-
-};
-fetchData();
-},[]);
+ const { apps, loading } = useApps();
 
 
           return (
@@ -30,13 +21,15 @@ fetchData();
 
  
 
-<div className='grid grid-cols-4 justify-center items-center gap-5 py-10'>
+{loading ? (<div className='flex justify-center items-center py-5'> <ClipLoader color="#ad46ff" /> </div>) : (<div className='grid grid-cols-4 justify-center items-center gap-5 py-10'>
 {
 apps.map((app,ind) => {
           return <AppCard app={app} key={ind}></AppCard>
 })
 }
-</div>
+</div>)}
+
+
 
 </div>
 
