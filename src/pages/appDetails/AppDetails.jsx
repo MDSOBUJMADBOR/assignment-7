@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router';
 import useApps from '../../hooks/useApps';
 import { HashLoader } from 'react-spinners';
 import Img from '../../assets/call.png';
 import Img2 from '../../assets/text.png';
 import Img3 from '../../assets/video.png';
+import { InstallAppsContext } from '../../context/InstalledAppsContext';
 
 const AppDetails = () => {
 
@@ -16,7 +17,9 @@ const { id } = useParams();
 // console.log(expectedApp,'expected');
 
 
-const [ installedApps , setInstalledApps ] = useState([]);
+
+const {installedApps , setInstalledApps} = useContext(InstallAppsContext);
+
 
 const  handleInstallApp = () => {
   setInstalledApps([...installedApps, expectedApp])
@@ -162,12 +165,12 @@ return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLo
                
               </button>
 
-              <button className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
+              <button onClick={handleInstallApp} className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
                 <img src={Img2} alt="" />
                <p>Text</p>
               </button>
 
-              <button className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
+              <button onClick={handleInstallApp} className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
                 <img src={Img3} alt="" />
                  <p>Video</p>
               </button>
