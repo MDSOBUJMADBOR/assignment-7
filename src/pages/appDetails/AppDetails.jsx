@@ -6,6 +6,7 @@ import Img from '../../assets/call.png';
 import Img2 from '../../assets/text.png';
 import Img3 from '../../assets/video.png';
 import { InstallAppsContext } from '../../context/InstalledAppsContext';
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
 
@@ -21,9 +22,16 @@ const { id } = useParams();
 const {installedApps , setInstalledApps} = useContext(InstallAppsContext);
 
 
-const  handleInstallApp = () => {
-  setInstalledApps([...installedApps, expectedApp])
-}
+const handleInstallApp = (type) => {
+  const newItem = {
+    ...expectedApp,
+    type, // 👈 এটা add করো
+    next_due_date: new Date().toDateString()
+  };
+
+  setInstalledApps([...installedApps, newItem]);
+  toast("Added to Timeline");
+};
 console.log(installedApps,'ins');
 
 if(loading){
@@ -158,19 +166,19 @@ return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLo
             <h3 className="mb-4 font-semibold">Quick Check-In</h3>
 
             <div className="grid grid-cols-3 gap-4">
-              <button onClick={handleInstallApp} className= "btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl  flex-col ">
+              <button onClick={() => handleInstallApp("call")} className= "btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl  flex-col ">
               
                  <img src={Img} alt="" />
                  <p>Call</p>
                
               </button>
 
-              <button onClick={handleInstallApp} className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
+              <button onClick={() => handleInstallApp("text")} className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
                 <img src={Img2} alt="" />
                <p>Text</p>
               </button>
 
-              <button onClick={handleInstallApp} className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
+              <button onClick={() => handleInstallApp("video")} className="btn bg-[#f3f4f6]  rounded-xl py-13 text-3xl flex-col">
                 <img src={Img3} alt="" />
                  <p>Video</p>
               </button>

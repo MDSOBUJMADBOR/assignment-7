@@ -1,12 +1,40 @@
-import React from 'react';
+import { useContext } from "react";
+import { InstallAppsContext } from "../../context/InstalledAppsContext";
+import { PieChart, Pie, Tooltip, Legend } from "recharts";
 
 const Stats = () => {
-          return (
-                    <div>
-Stats
+  const { installedApps } = useContext(InstallAppsContext);
 
-                    </div>
-          );
+  // 👉 Count by type
+  const callCount = installedApps.filter(app => app.type === "call").length;
+  const textCount = installedApps.filter(app => app.type === "text").length;
+  const videoCount = installedApps.filter(app => app.type === "video").length;
+
+  const data = [
+    { name: "Text", value: textCount, fill: "#7c3aed" },
+    { name: "Call", value: callCount, fill: "#1f4d3d" },
+    { name: "Video", value: videoCount, fill: "#16a34a" },
+  ];
+
+  return (
+    <div className="my-10 shadow p-10 rounded-md border border-slate-300 container mx-auto">
+      <h2 className="font-semibold text-3xl mb-10 text-center">
+        Friendship Analytics
+      </h2>
+
+      <PieChart width={400} height={400}>
+        <Pie
+          data={data}
+          innerRadius={100}
+          outerRadius={140}
+          paddingAngle={5}
+          dataKey="value"
+        />
+        <Tooltip />
+        <Legend />
+      </PieChart>
+    </div>
+  );
 };
 
 export default Stats;
