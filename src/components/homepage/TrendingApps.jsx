@@ -21,7 +21,7 @@ const TrendingApps = () => {
 
  
 
-{loading ? (<div className='flex justify-center items-center py-5'> <ClipLoader color="#ad46ff" /> </div>) : (<div className='grid grid-cols-4 justify-center items-center gap-5 py-10'>
+{loading ? (<div className='flex justify-center items-center py-5'> <ClipLoader color="#ad46ff" /> </div>) : (<div className='grid grid-cols-1  md:grid-cols-4 justify-center items-center gap-5 py-10 px-6'>
 {
 apps.map((app,ind) => {
           return <AppCard app={app} key={ind}></AppCard>

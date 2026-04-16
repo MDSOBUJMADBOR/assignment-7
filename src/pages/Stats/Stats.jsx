@@ -17,17 +17,21 @@ const Stats = () => {
   ];
 
   return (
-    <div className="my-10 shadow p-10 rounded-md border border-slate-300 container mx-auto">
-      <h2 className="font-semibold text-3xl mb-10 text-center">
+    <div className="bg-[#f8fafc]">
+    <div className="    p-10 rounded-md  max-w-[1110px] mx-auto">
+      <h2 className="font-bold text-4xl mb-10 ">
         Friendship Analytics
       </h2>
 
+<div className="px-6 rounded-md bg-white">
+  <h2 className="font-semibold text-2xl pt-2">By Interaction Type</h2>
       <PieChart style={{
         width:'100%',
         maxWidth: '500px',
         maxHeight:'80vh',
         margin : 'auto',
         aspectRatio:1,
+
       }} >
         <Pie
           data={data}
@@ -39,6 +43,9 @@ const Stats = () => {
         <Tooltip />
         <Legend />
       </PieChart>
+</div>
+
+    </div>
     </div>
   );
 };

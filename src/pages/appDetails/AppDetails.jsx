@@ -56,13 +56,13 @@ return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLo
 <div>
 
  <div className="p-6 bg-gray-100 min-h-screen">
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid gird-cols-1  md:grid-cols-4 gap-6">
 
 
 
 
         {/* LEFT PROFILE CARD */}
-        <div className="col-span-1    text-center ">
+        <div className="  md:col-span-1    text-center ">
    
         <div className='bg-white shadow-md rounded-2xl py-5 space-y-3'>
             <img
@@ -128,7 +128,7 @@ return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLo
 
 
         {/* RIGHT SIDE */}
-        <div className="col-span-3 space-y-6">
+        <div className=" md:col-span-3 space-y-6">
 
           {/* TOP STATS */}
           <div className="grid grid-cols-3 gap-4">
