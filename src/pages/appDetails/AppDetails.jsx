@@ -32,7 +32,7 @@ const handleInstallApp = (type) => {
   setInstalledApps([...installedApps, newItem]);
   toast("Added to Timeline");
 };
-console.log(installedApps,'ins');
+// console.log(installedApps,'ins');
 
 if(loading){
 return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLoader color="#ad46ff" /></div> )

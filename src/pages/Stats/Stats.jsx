@@ -22,7 +22,13 @@ const Stats = () => {
         Friendship Analytics
       </h2>
 
-      <PieChart width={400} height={400}>
+      <PieChart style={{
+        width:'100%',
+        maxWidth: '500px',
+        maxHeight:'80vh',
+        margin : 'auto',
+        aspectRatio:1,
+      }} >
         <Pie
           data={data}
           innerRadius={100}
