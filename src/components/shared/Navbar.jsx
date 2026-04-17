@@ -67,10 +67,10 @@ const Navbar = () => {
 
 <div>
 
-   <ul className="md:flex hidden  justify-between gap-3  font-semibold items-center  ">
+   <ul className="sm:flex hidden  justify-between gap-3  font-semibold items-center  ">
           {navItems.map((item, index) => (
             <MyNavLink key={index} to={item.path}>
-             <span className=" md:flex hidden items-center gap-2 justify-between p-1 px-2 ">
+             <span className=" sm:flex hidden items-center gap-2 justify-between p-1 px-2 ">
         <li>{item.icon}</li>
         <li> {item.text}</li>
       </span>
@@ -82,10 +82,15 @@ const Navbar = () => {
          
         </ul>
 
+
+
+
+
+
     {/* small devise start */}
 
-          <div onClick={() => setOpen(!open)} className="dropdown dropdown-center md:hidden ">
-  <div tabIndex={0} role="button" className=" m-1">{open ? <X className='md:hidden'></X> : <Menu className='md:hidden'></Menu>}</div>
+          <div onClick={() => setOpen(!open)} className="dropdown dropdown-center sm:hidden ">
+  <div tabIndex={0} role="button" className=" m-1">{open ? <X className='sm:hidden'></X> : <Menu className='sm:hidden'></Menu>}</div>
   <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm gap-2">
     {/* <li><a>Item 1</a></li>
     <li><a>Item 2</a></li> */}
