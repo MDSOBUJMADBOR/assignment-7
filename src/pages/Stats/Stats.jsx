@@ -28,7 +28,7 @@ const Stats = () => {
       <PieChart style={{
         width:'100%',
         maxWidth: '500px',
-        maxHeight:'80vh',
+        maxHeight:'50vh',
         margin : 'auto',
         aspectRatio:1,
 

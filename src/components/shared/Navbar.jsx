@@ -70,7 +70,7 @@ const Navbar = () => {
    <ul className="md:flex hidden  justify-between gap-3  font-semibold items-center  ">
           {navItems.map((item, index) => (
             <MyNavLink key={index} to={item.path}>
-             <span className=" md:flex hidden items-center gap-2 justify-between p-2 ">
+             <span className=" md:flex hidden items-center gap-2 justify-between p-1 px-2 ">
         <li>{item.icon}</li>
         <li> {item.text}</li>
       </span>

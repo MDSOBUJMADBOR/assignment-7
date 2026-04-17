@@ -32,7 +32,7 @@ const handleInstallApp = (type) => {
   setInstalledApps([...installedApps, newItem]);
 
   // toast(`${type}  `);
-  toast.success(`${type.toUpperCase()} sent to ${expectedApp.name} ✅`,{
+  toast.success(`${type.toUpperCase()} with ${expectedApp.name} ✅`,{
   position: "top-center",
 });
 };
