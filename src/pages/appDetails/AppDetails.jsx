@@ -30,7 +30,11 @@ const handleInstallApp = (type) => {
   };
 
   setInstalledApps([...installedApps, newItem]);
-  toast("Added to Timeline");
+
+  // toast(`${type}  `);
+  toast.success(`${type.toUpperCase()} sent to ${expectedApp.name} ✅`,{
+  position: "top-center",
+});
 };
 // console.log(installedApps,'ins');
 
@@ -75,7 +79,7 @@ return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLo
 
 
           <span className=" px-3 py-1 rounded-full text-sm ">
-          <p className={`inline-block px-3 py-1 rounded ${getStatusColor(expectedApp.status)}`}>
+          <p className={`inline-block px-3 py-1 rounded-full ${getStatusColor(expectedApp.status)}`}>
         {expectedApp.status}
       </p>
           </span>
@@ -85,7 +89,7 @@ return ( <div className='h-[60vh] flex justify-center items-center py-5'><HashLo
  <p> {
 
           expectedApp.tags.map((tag, ind) => (
-            <span key={ind} className='bg-gray-200 p-2  rounded  ml-3 '>
+            <span key={ind} className='bg-[#cbfadb]  rounded-full ml-2  font-semibold p-1 px-2'>
               {tag}
             </span>
           ))

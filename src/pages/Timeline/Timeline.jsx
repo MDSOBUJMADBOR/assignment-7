@@ -40,7 +40,7 @@ return (
       
       <li className='w-[200px] hover:bg-white'>
         <details>
-          <summary className='text-[18px] font-semibold'>Filter timeline</summary>
+          <summary className='text-[18px] font-semibold'>Filter Timeline</summary>
           <ul className="bg-base-100 rounded-t-none p-2 w-[200px] font-semibold">
             <li><a onClick={() => setFilterType("all")}>All</a></li>
             <li><a onClick={() => setFilterType("call")}>Call</a></li>

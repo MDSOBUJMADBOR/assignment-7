@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { ChartLine, Clock2, House, HouseIcon, Menu, X } from 'lucide-react';
 
 import MyNavLink from "./MyNavLink";
+import { Link } from "react-router";
 
 
 const Navbar = () => {
@@ -12,21 +13,23 @@ const Navbar = () => {
     {
       path: "/",
       text: " Home",
-       icon:  <HouseIcon   />,
+       icon:  <HouseIcon size={18}  />,
     },
     {
       path: "/Timeline",
       text: "Timeline",
-      icon: <Clock2  />,
+      icon: <Clock2 size={18} />,
     },
     {
       path: "/Stats",
       text: "Stats",
-      icon:  <ChartLine   />
+      icon:  <ChartLine size={18} />
     },
     
   ]; 
   const [open,setOpen] = useState(false)
+
+
 
   return (
     <nav className="border-b border-gray-200 sticky top-0 bg-white z-50 shadow-xl/3 px-4">
@@ -56,18 +59,20 @@ const Navbar = () => {
 
 {/* //---------------------------------------------- */}
 
-    <h2 className="text-3xl font-bold">Keen<span className="font-semibold">Keeper</span></h2>
+   <Link to="/" className="text-3xl font-bold">
+  Keen<span className="font-semibold text-[#244D3F]">Keeper</span>
+</Link>
 </div>
 
 
 <div>
 
-   <ul className="md:flex hidden flex justify-between gap-2 items-center  ">
+   <ul className="md:flex hidden  justify-between gap-3  font-semibold items-center  ">
           {navItems.map((item, index) => (
             <MyNavLink key={index} to={item.path}>
-             <span className="flex items-center gap-1">
-        {item.icon}
-        {item.text}
+             <span className=" md:flex hidden items-center gap-2 justify-between p-2 ">
+        <li>{item.icon}</li>
+        <li> {item.text}</li>
       </span>
             </MyNavLink>
            
@@ -81,14 +86,14 @@ const Navbar = () => {
 
           <div onClick={() => setOpen(!open)} className="dropdown dropdown-center md:hidden ">
   <div tabIndex={0} role="button" className=" m-1">{open ? <X className='md:hidden'></X> : <Menu className='md:hidden'></Menu>}</div>
-  <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+  <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm gap-2">
     {/* <li><a>Item 1</a></li>
     <li><a>Item 2</a></li> */}
 {navItems.map((item, index) => (
             <MyNavLink key={index} to={item.path}>
-             <span className="flex items-center gap-1">
-        {item.icon}
-        {item.text}
+             <span className="flex items-center gap-1 justify-start ">
+       {item.icon}
+       {item.text}
       </span>
             </MyNavLink>
            

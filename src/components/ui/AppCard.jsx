@@ -11,21 +11,21 @@ const AppCard = ({ app }) => {
   };
 
   return (
-  <Link to={`/${app.id}`} className='shadow-md bg-white p-3 rounded-lg flex justify-center items-center'>
-     <div className='text-center'>
-           <img src={app.picture} alt="" className='rounded-full p-2 max-w-[250px] mx-auto w-[80px] h-[80px]' />
+  <Link to={`/${app.id}`} className='  shadow-md bg-white  rounded-lg flex justify-center items-center transition duration-500 hover:scale-108 '>
+     <div className='text-center space-y-4 py-6'>
+           <img src={app.picture} alt="" className='rounded-full  mx-auto w-[80px] h-[80px]' />
 
-      <h2 className='font-semibold text-2xl mt-2 '>{app.name}</h2>
+      <h2 className='font-semibold text-2xl  '>{app.name}</h2>
 
       <p className='text-gray-500'>
         {app.days_since_contact}d ago
       </p>
 
       {/* Tags */}
-      <div className='flex flex-wrap gap-2 my-2'>
+      <div className='flex flex-wrap gap-2 '>
         {
           app.tags.map((tag, ind) => (
-            <span key={ind} className='bg-gray-200 px-2 py-1 rounded flex justify-center items-center'>
+            <span key={ind} className='bg-[#cbfadb]  rounded-full flex justify-center items-center font-semibold p-1 px-2'>
               {tag}
             </span> 
           ))
@@ -33,7 +33,7 @@ const AppCard = ({ app }) => {
       </div>
 
       {/* Status */}
-      <p className={`inline-block px-3 py-1 rounded ${getStatusColor(app.status)}`}>
+      <p className={`inline-block p-1 px-2  rounded-full ${getStatusColor(app.status)}`}>
         {app.status}
       </p>
      </div>
