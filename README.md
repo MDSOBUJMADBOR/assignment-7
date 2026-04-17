@@ -19,3 +19,20 @@ https://github.com/MDSOBUJMADBOR/assignment-7
 - 🌐 React Router DOM
 - 📊 Recharts
 - 🔔 React Toastify
+
+
+  <h3>📱 Responsive Design</h3>
+
+- Fully responsive for:
+
+- 📱 Mobile
+- 📲 Tablet
+- 💻 Desktop
+
+
+
+
+
+
+
+
