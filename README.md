@@ -23,7 +23,7 @@ https://github.com/MDSOBUJMADBOR/assignment-7
 
   <h3>📱 Responsive Design</h3>
 
-- Fully responsive for:
+- Fully responsive for: 
 
 - 📱 Mobile
 - 📲 Tablet
