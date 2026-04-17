@@ -1,18 +1,13 @@
-<h1>KeenKeeper — Keep Your Friendships Alive</h1>
+<h1> 👥 KeenKeeper — Keep Your Friendships Alive</h1>
 
-<h3>📱 Responsive Design</h3>
+<p>A modern and responsive web application to help you maintain meaningful friendships by tracking your interactions, setting goals, and visualizing communication patterns.</p>
 
-- Mobile
-- Tablet
-- and desktop
+<h3>🌐 Live Link</h3>
+https://assignment-7-gamma-two.vercel.app/
 
-<h3>Technology</h3>
+<h3>📂 GitHub Repository</h3>
 
-
-- React.js
-- React Router DOM
-- Tailwind CSS+Any component library
-- Recharts
+https://github.com/MDSOBUJMADBOR/assignment-7
   
 
 
