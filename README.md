@@ -9,5 +9,13 @@ https://assignment-7-gamma-two.vercel.app/
 
 https://github.com/MDSOBUJMADBOR/assignment-7
   
+<h3>📌 Project Overview</h3>
+<p>KeenKeeper helps users stay connected with their friends by tracking interactions like calls, texts, and video chats. It provides a clean dashboard, detailed friend profiles, and a timeline system to ensure no friendship is forgotten.</p>
 
+<h3>🛠️ Technologies Used</h3>
 
+- ⚛️ React.js
+- 🎨 Tailwind CSS
+- 🌐 React Router DOM
+- 📊 Recharts
+- 🔔 React Toastify
